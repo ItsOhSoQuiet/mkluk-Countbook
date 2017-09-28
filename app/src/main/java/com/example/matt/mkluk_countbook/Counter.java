@@ -74,6 +74,7 @@ public class Counter {
         }
     }
 
+    /* Representation of the string for the counter */
     @Override
     public String toString() {
         /* convert date to yyyy-MM-dd format */
