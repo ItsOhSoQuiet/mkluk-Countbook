@@ -1,6 +1,8 @@
 package com.example.matt.mkluk_countbook;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Matt on 2017-09-21.
@@ -50,7 +52,7 @@ public class Counter {
     }
     public void setComment(String comment) { this.comment = comment; }
 
-    // methods to add and subtract from the counters, along with the date
+    /* methods to add and subtract from the counters, along with the date */
     public void addToCurrentValue() {
         if ( currentValue < 2147483647 ) {
             currentValue++;
@@ -64,11 +66,23 @@ public class Counter {
         }
     }
 
-    // change the initial value with the date
+    /* change the initial value with the date */
     public void changeInitialValue(int newInitialValue) {
         if ( newInitialValue >= 0 ) {
             this.setCurrentValue(newInitialValue);
             this.setDate();
         }
+    }
+
+    @Override
+    public String toString() {
+        /* convert date to yyyy-MM-dd format */
+        SimpleDateFormat yearMonthDay = new SimpleDateFormat("yyyy-MM-dd", Locale.CANADA);
+        String dateFormatted = yearMonthDay.format(date);
+
+        /* return the format */
+        return name + " |\n" + date.toString() +" |\n"
+                + "Current Value | " + Integer.toString(currentValue)
+                + " |\n" + dateFormatted + " |\n" + comment;
     }
 }
