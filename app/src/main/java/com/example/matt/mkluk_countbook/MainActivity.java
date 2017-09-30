@@ -1,8 +1,10 @@
 package com.example.matt.mkluk_countbook;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -45,6 +47,15 @@ public class MainActivity extends Activity {
         /* code the Button and ListView */
         Button addButton = (Button) findViewById(R.id.add);
         counterList = (ListView) findViewById(R.id.counterList);
+
+        /* go to AddCounterActivity */
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCounterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

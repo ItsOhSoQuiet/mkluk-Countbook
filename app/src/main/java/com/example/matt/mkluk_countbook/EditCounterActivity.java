@@ -1,9 +1,10 @@
 package com.example.matt.mkluk_countbook;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EditCounterActivity extends AppCompatActivity {
+public class EditCounterActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
