@@ -20,4 +20,16 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp" />
 
+    <ListView
+        android:id="@+id/counterList"
+        android:layout_width="379dp"
+        android:layout_height="485dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none|vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">mkluk-Countbook</string>
     <string name="addCounter">Add Counter</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="delete">Delete Counter</string>
+    <string name="reset">Reset Counter</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="nameMsg">Enter a name</string>
+    <string name="name">Name:</string>
+    <string name="initValue">Initial Value:</string>
+    <string name="initMsg">Enter an initial value</string>
+    <string name="comment">Comment:</string>
+    <string name="commentMsg">Enter a comment</string>
 </resources>
