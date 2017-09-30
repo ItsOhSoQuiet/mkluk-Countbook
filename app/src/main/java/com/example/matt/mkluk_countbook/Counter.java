@@ -82,8 +82,8 @@ public class Counter {
         String dateFormatted = yearMonthDay.format(date);
 
         /* return the format */
-        return name + " |\n" + date.toString() +" |\n"
-                + "Current Value | " + Integer.toString(currentValue)
-                + " |\n" + dateFormatted + " |\n" + comment;
+        return "Name: " + name + " \nCurrent Value: "
+                + Integer.toString(currentValue) + " \nLast Edited: "
+                + dateFormatted + " \nComments: " + comment;
     }
 }

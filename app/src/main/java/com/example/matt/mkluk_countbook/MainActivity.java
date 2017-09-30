@@ -1,6 +1,7 @@
 package com.example.matt.mkluk_countbook;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -15,10 +17,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
+import static com.example.matt.mkluk_countbook.R.id.textView;
 
 /*
  * The main activity of the class
@@ -60,11 +66,23 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onStart() {
+        /* load in the counters */
         super.onStart();
         loadFromFile();
-        // TODO find out how to show objects
+
+        /* show the number of counters */
+        String numOfCounts = Integer.toString(counters.size());
+        String numCountMsg;
+        if (counters.size() == 1) {
+            numCountMsg = numOfCounts + " Counter";
+        } else {
+            numCountMsg = numOfCounts + " Counters";
+        }
+        TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText(numCountMsg);
+
         adapter = new ArrayAdapter<Counter>(this,
-                R.layout.list_main, counters);
+                android.R.layout.simple_list_item_1, counters);
         counterList.setAdapter(adapter);
     }
 
