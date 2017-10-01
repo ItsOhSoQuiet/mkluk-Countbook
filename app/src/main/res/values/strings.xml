@@ -13,4 +13,15 @@
     <string name="initMsg">Enter an initial value</string>
     <string name="comment">Comment:</string>
     <string name="commentMsg">Enter a comment</string>
+    <string name="done">Done</string>
+    <string name="edit">Edit</string>
+    <string name="currValue">Current Value:</string>
+    <string name="changeName">Change Name:</string>
+    <string name="changeInit">Change Initial Value:</string>
+    <string name="changeCurr">Change Current Value:</string>
+    <string name="changeComment">Change Comments:</string>
+    <string name="add">Add</string>
+    <string name="subtract">Subtract</string>
+    <string name="editValues">Edit Values of Counter</string>
+    <string name="increment">Add/Subtract to/from Current Value</string>
 </resources>

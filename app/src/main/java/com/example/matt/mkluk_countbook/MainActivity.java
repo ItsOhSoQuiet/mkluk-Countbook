@@ -1,11 +1,10 @@
 package com.example.matt.mkluk_countbook;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -17,21 +16,17 @@ import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-
-import static com.example.matt.mkluk_countbook.R.id.textView;
 
 /*
  * The main activity of the class
  * It shows the counters, allows the user to create a counter,
  * and allows the user to access the counters to change them.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     /*
      * Initialize the file to load and save from
@@ -51,7 +46,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         /* code the Button and ListView */
-        Button addButton = (Button) findViewById(R.id.add);
+        Button addButton = (Button) findViewById(R.id.plus);
         counterList = (ListView) findViewById(R.id.counterList);
 
         /* go to AddCounterActivity */
@@ -60,6 +55,17 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCounterActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        /* go to activity to edit the counter */
+        counterList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent editIntent = new Intent(MainActivity.this, EditCounterActivity.class);
+                int countPosition = position;
+                editIntent.putExtra("counterPosition", position);
+                startActivity(editIntent);
             }
         });
     }

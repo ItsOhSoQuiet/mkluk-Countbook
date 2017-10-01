@@ -24,7 +24,7 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class AddCounterActivity extends Activity {
+public class AddCounterActivity extends AppCompatActivity {
 
     /* get the filename and the counters */
     private static final String FILENAME = "file.sav";

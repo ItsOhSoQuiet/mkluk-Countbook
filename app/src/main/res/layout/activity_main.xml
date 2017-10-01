@@ -7,7 +7,7 @@
     tools:context="com.example.matt.mkluk_countbook.MainActivity">
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/plus"
         android:layout_width="0dp"
         android:layout_height="61dp"
         android:layout_marginBottom="24dp"
