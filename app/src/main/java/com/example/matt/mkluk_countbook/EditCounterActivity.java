@@ -90,7 +90,7 @@ public class EditCounterActivity extends AppCompatActivity {
             }
         });
 
-        /* reset Current Value to Initial View */
+        /* reset Current Value to be the Initial Value */
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

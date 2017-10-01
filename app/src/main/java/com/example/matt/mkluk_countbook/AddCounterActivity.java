@@ -39,9 +39,6 @@ public class AddCounterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_counter);
 
-        /* get the intent */
-        Intent intent = getIntent();
-
         /* get the buttons and EditTexts */
         Button ok = (Button) findViewById(R.id.ok);
         Button cancel = (Button) findViewById(R.id.cancel);

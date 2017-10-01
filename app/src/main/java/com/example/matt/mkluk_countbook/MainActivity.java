@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent editIntent = new Intent(MainActivity.this, EditCounterActivity.class);
-                int countPosition = position;
                 editIntent.putExtra("counterPosition", position);
                 startActivity(editIntent);
             }
