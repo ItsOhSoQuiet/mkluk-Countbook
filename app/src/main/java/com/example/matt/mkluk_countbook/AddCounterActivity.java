@@ -24,6 +24,10 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/*
+ * Activity that allows the user to enter a new counter
+ * and saves the counter into a list of counters
+ */
 public class AddCounterActivity extends AppCompatActivity {
 
     /* get the filename and the counters */

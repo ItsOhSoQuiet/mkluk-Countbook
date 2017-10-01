@@ -8,6 +8,12 @@ import java.util.Locale;
  * Created by Matt on 2017-09-21.
  */
 
+/*
+ * Counter class that holds all of
+ * the values for the Counter objects,
+ * including the Constructor and the
+ * string representation
+ */
 public class Counter {
     // Counter class holds all of the values
     private String name;

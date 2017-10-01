@@ -22,6 +22,11 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/*
+ * An activity that allows users to edit
+ * every part of a Counter object,
+ * except for the date.
+ */
 public class ChangeValuesActivity extends AppCompatActivity {
 
     /* get the counters */
