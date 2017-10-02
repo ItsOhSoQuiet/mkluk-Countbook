@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Counter> counters = new ArrayList<Counter>();
     private ArrayAdapter<Counter> adapter;
 
+    private Button addButton; // Button to add an encounter
+
     /* called when the app is first created */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /* code the Button and ListView */
-        Button addButton = (Button) findViewById(R.id.plus);
+        addButton = (Button) findViewById(R.id.plus);
         counterList = (ListView) findViewById(R.id.counterList);
 
         /* go to AddCounterActivity */

@@ -34,14 +34,18 @@ public class AddCounterActivity extends AppCompatActivity {
     private static final String FILENAME = "file.sav";
     private ArrayList<Counter> counters = new ArrayList<Counter>();
 
+    /* initialize the buttons */
+    private Button ok;
+    private Button cancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_counter);
 
         /* get the buttons and EditTexts */
-        Button ok = (Button) findViewById(R.id.ok);
-        Button cancel = (Button) findViewById(R.id.cancel);
+        ok = (Button) findViewById(R.id.ok);
+        cancel = (Button) findViewById(R.id.cancel);
 
         /* cancel without affecting the counter */
         cancel.setOnClickListener(new View.OnClickListener() {

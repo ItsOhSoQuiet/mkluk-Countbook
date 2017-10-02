@@ -34,6 +34,13 @@ public class ChangeValuesActivity extends AppCompatActivity {
     private ArrayList<Counter> counters = new ArrayList<Counter>();
     private int counterPosition;
 
+    /* initialize the buttons */
+    private Button newName;
+    private Button newInit;
+    private Button newCurr;
+    private Button newComm;
+    private Button okEdit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +51,11 @@ public class ChangeValuesActivity extends AppCompatActivity {
         counterPosition = intent.getIntExtra("positionToEdit", 0);
 
         /* get the buttons */
-        Button newName = (Button) findViewById(R.id.newName);
-        Button newInit = (Button) findViewById(R.id.newInit);
-        Button newCurr = (Button) findViewById(R.id.newCurr);
-        Button newComm = (Button) findViewById(R.id.newComm);
-        Button okEdit = (Button) findViewById(R.id.okEdit);
+        newName = (Button) findViewById(R.id.newName);
+        newInit = (Button) findViewById(R.id.newInit);
+        newCurr = (Button) findViewById(R.id.newCurr);
+        newComm = (Button) findViewById(R.id.newComm);
+        okEdit = (Button) findViewById(R.id.okEdit);
 
         /* change the name */
         newName.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +88,7 @@ public class ChangeValuesActivity extends AppCompatActivity {
                             "No value entered", Toast.LENGTH_SHORT).show();
                 } else {
                     int countInitInt = Integer.parseInt(countInit);
-                    counters.get(counterPosition).setInitialValue(countInitInt);
+                    counters.get(counterPosition).changeInitialValue(countInitInt);
                     saveInFile();
                     Toast.makeText(ChangeValuesActivity.this,
                             "Initial Value changed", Toast.LENGTH_SHORT).show();

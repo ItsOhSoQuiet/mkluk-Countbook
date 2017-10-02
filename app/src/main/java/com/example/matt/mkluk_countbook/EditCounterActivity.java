@@ -38,6 +38,14 @@ public class EditCounterActivity extends AppCompatActivity {
     private TextView currentView; //shows the current value
     private int counterPosition; // for accessing the counters list
 
+    /* initialize the buttons */
+    private Button minus;
+    private Button plus;
+    private Button editValues;
+    private Button delete;
+    private Button reset;
+    private Button done;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,12 +56,12 @@ public class EditCounterActivity extends AppCompatActivity {
         counterPosition = intent.getIntExtra("counterPosition", 0);
 
         /* add the buttons */
-        Button minus = (Button) findViewById(R.id.minus);
-        Button plus = (Button) findViewById(R.id.plus);
-        Button editValues = (Button) findViewById(R.id.editValues);
-        Button delete = (Button) findViewById(R.id.delete);
-        Button reset = (Button) findViewById(R.id.reset);
-        Button done = (Button) findViewById(R.id.done);
+        minus = (Button) findViewById(R.id.minus);
+        plus = (Button) findViewById(R.id.plus);
+        editValues = (Button) findViewById(R.id.editValues);
+        delete = (Button) findViewById(R.id.delete);
+        reset = (Button) findViewById(R.id.reset);
+        done = (Button) findViewById(R.id.done);
 
         /* decrement from current value */
         minus.setOnClickListener(new View.OnClickListener() {

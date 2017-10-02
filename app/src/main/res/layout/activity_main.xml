@@ -24,14 +24,14 @@
         android:id="@+id/counterList"
         android:layout_width="379dp"
         android:layout_height="457dp"
-        android:layout_marginTop="37dp"
         android:scrollbars="none|vertical"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
 
     <TextView
         android:id="@+id/textView"
